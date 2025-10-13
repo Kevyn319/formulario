@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form1.css">
+    <link rel="icon" href="mario.png">
+</head>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<body>
+
+<h1>Cadastro do Candidato</h1>
+
+    <form action="https://formspree.io/f/xpwyjbpr" method="post">
+
+<fieldset>
+
+<legend>Informações Pessoais</legend>
+
+<label class="m1" for="nome">Nome:</label>
+<input type="text" id="nome" size="9" value="" maxlength="100" placeholder="name" required name="Nome:">
+
+<label class="m1" for="">Data de nascimento:</label>
+<input type="date" size="9" required name="Data de nascimento:">
+
+<label class="m1" for="">Idade:</label>
+<input type="text" required size="9" maxlength="3" placeholder="000" name="Idade:">
+
+<label class="m1" for="">sexo biologico:</label>
+<input type="radio" name="sexo">feminino
+<input type="radio" name="sexo">masculino
+<input type="radio" name="sexo">prefiro não dizer
+
+ <label class="m1"for="">CPF:</label> 
+<input type="text" size="9" maxlength="11" id="cpf" placeholder="000.000.000-00" name="CPF:">
+
+<label class="m1" for="Estado Civil">Estado Civil
+    <select class="b1" name="Estado Civil">
+    <option value="">Solteiro</option>
+    <option value="">Casado</option>
+    <option value="">Viúvo</option>
+    <option value="">Divorciado</option>
+    </select>
+</label>
+
+</fieldset>
+<fieldset>
+
+<legend>Informações de Contato</legend>
+
+<label for="" class="m1">Rua,nº:</label>
+<input type="text" size="9" required maxlength="100000" name="Rua,nº:">
+
+<label for="" class="m1">Complemento:</label>
+<input type="text" required size="9" name="Complemento:">
+
+<label for="" class="m1">Bairro:</label>
+<input type="text" required size="9" name="Bairro:">
+
+<label for="" class="m1">CEP:</label>
+<input type="text" required placeholder="00000-000" id="CEP" size="9" maxlength="8" name="CEP:">
+
+ <label class="m1" for="">UF
+        <select name="">
+            <option value="">SP</option>
+            <option value="">AC</option>
+            <option value="">AL</option>
+            <option value="">AM</option>
+            <option value="">AP</option>
+            <option value="">BA</option>
+            <option value="">CE</option>
+            <option value="">DF</option>
+            <option value="">ES</option>
+            <option value="">GO</option>
+            <option value="">MA</option>
+            <option value="">MG</option>
+            <option value="">MS</option>
+            <option value="">MT</option>
+            <option value="">PA</option>
+            <option value="">PB</option>
+            <option value="">PE</option>
+            <option value="">PI</option>
+            <option value="">PR</option>
+            <option value="">RJ</option>
+            <option value="">RN</option>
+            <option value="">RO</option>
+            <option value="">RR</option>
+            <option value="">RS</option>
+            <option value="">SC</option>
+            <option value="">SE</option>
+            <option value="">TO</option>
+        </select>
+    </label>
+
+<label for="" class="m1">Celular:</label>
+<input type="text" required size="9" id="celular" placeholder="00-00000-0000" maxlength="11" name="Celular:">
+
+<label for="" class="m1">E-mail:</label>
+<input type="text" required size="8" name="E-mail:">
+
+<label for="" class="m2">Comentários</label>
+<input type="text" size="25" placeholder="contribua com seu comentário" name="Comentários">
+
+</fieldset>
+
+<button type="reset">limpar</button>
+
+<button type="submit">enviar</button>
+
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#cpf").mask('000.000.000-00', {reverse: true});
+    $('#CEP').mask('00000-000');
+    $('#celular').mask('(00) 00000-0000');
+});
+</script>
+</body>
+</html>
